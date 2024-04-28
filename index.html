@@ -1,0 +1,96 @@
+<!-- All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications. -->
+<!DOCTYPE html>
+<!-- Notice that the entire contents of the page are nested within an html element. All other elements must be descendants of this html element.-->
+<html lang="en">
+
+<head>
+    <!-- Inside the head element, nest a meta element with an attribute named charset. Set to the value to utf-8 which tells the browser how to encode characters for the page.-->
+    <meta charset="utf-8">
+    <!-- The title element determines what browsers show in the title bar or tab for the page.-->
+    <title>CatPhotoApp</title>
+</head>
+
+<body>
+    <main>
+        <h1>CatPhotoApp</h1>
+        <section>
+            <h2>Cat Photos</h2>
+            <!-- target="_blank" opens link in new tab -->
+            <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery</p>
+            <a href="https://freecatphotoapp.com" target="_blank"><img
+                    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                    alt="A cute orange cat lying on its back"></a>
+        </section>
+        <section>
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <!-- The figure element represents self-contained content and will allow you to associate an image with a caption.-->
+            <!-- A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element-->
+            <!-- Emphasize the word love in the figcaption element by wrapping a word in an emphasis em element.-->
+            <figure><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a
+                plate.">
+                <figcaption>Cats <em>love</em> lasagna</figcaption>
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                    alt="Five cats looking around a field.">
+                <!-- The strong element is used to indicate that some text is of strong importance or urgent.-->
+                <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Cat Form</h2>
+            <!-- The action attribute indicates where form data should be sent.-->
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <!-- The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.-->
+                <fieldset>
+                    <!-- The legend element acts as a caption for the content in the fieldset element.-->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <!-- Nest your radio button inside a label element so that clicking the word Indoor also selects the corresponding radio button. label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers). -->
+                    <!-- The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.-->
+                    <!--  To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value.-->
+                    <!-- If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes. Since their name attributes are the same, add a value attribute to both radio buttons.-->
+                    <!-- Make the first radio button selected by default by adding the checked attribute. -->
+                    <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+                    <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+                </fieldset>
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    <!-- While you won't notice this in the browser, giving an input a name attribute makes it easier for a server to process your web form, especially when there are multiple checkboxes.-->
+                    <!-- Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with any checkboxes or radio buttons on the page.-->
+                    <input type="checkbox" id="loving" name="personality" value="loving" checked>
+                    <Label for="loving">Loving</Label>
+                    <input type="checkbox" id="lazy" name="personality" value="lazy">
+                    <label for="lazy">lazy</label>
+                    <input type="checkbox" id="energetic" name="personality" value="energetic">
+                    <label for="energetic">Energetic</label>
+                </fieldset>
+                <!-- The input element allows you several ways to collect data from a web form.-->
+                <!-- In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value to represent the data being submitted.-->
+                <!-- To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element.-->
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                <!-- The default behavior of clicking a form button without any attributes submits the form to the location specified in the form's action attribute-->
+                <!-- input and button elements are inline elements, which don't appear on new lines.-->
+                <!-- The button you added will submit the form by default. However, relying on default behavior may cause confusion. Add the type attribute with the value submit to the button to make it clear that it is a submit button.-->
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
+</body>
+
+</html>
